@@ -8,6 +8,7 @@ import { AboutObjectivesComponent } from './about/about-objectives.component';
 import { AboutValuesComponent } from './about/about-values.component';
 import { CvDownloadComponent } from './cv-download/cv-download.component';
 import { ProjectsComponent } from './projects/projects.component';
+import { SkillsComponent } from './skills/skills.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { ProjectsComponent } from './projects/projects.component';
     AboutObjectivesComponent,
     AboutValuesComponent,
     CvDownloadComponent,
-    ProjectsComponent
+  ProjectsComponent,
+  SkillsComponent
   ],
   imports: [
     BrowserModule,
