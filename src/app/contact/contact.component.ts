@@ -1,9 +1,11 @@
 import { Component } from '@angular/core';
+import { fadeScale } from '../animations';
 
 @Component({
   selector: 'app-contact',
   templateUrl: './contact.component.html',
-  styleUrls: ['./contact.component.scss']
+  styleUrls: ['./contact.component.scss'],
+  animations: [fadeScale]
 })
 export class ContactComponent {
   name = '';

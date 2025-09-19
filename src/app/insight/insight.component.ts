@@ -1,9 +1,11 @@
 import { Component } from '@angular/core';
+import { slideLeftFadeIn } from '../animations';
 
 @Component({
   selector: 'app-insight',
   templateUrl: './insight.component.html',
-  styleUrls: ['./insight.component.scss']
+  styleUrls: ['./insight.component.scss'],
+  animations: [slideLeftFadeIn]
 })
 export class InsightComponent {
   insights = [

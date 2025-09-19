@@ -14,6 +14,7 @@ import { EducationComponent } from './education/education.component';
 import { CertificationsComponent } from './certifications/certifications.component';
 import { ContactComponent } from './contact/contact.component';
 import { InsightComponent } from './insight/insight.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -22,18 +23,19 @@ import { InsightComponent } from './insight/insight.component';
     AboutObjectivesComponent,
     AboutValuesComponent,
     CvDownloadComponent,
-  ProjectsComponent,
-  SkillsComponent,
-  EducationComponent,
-  CertificationsComponent,
-  ContactComponent,
-  InsightComponent
+    ProjectsComponent,
+    SkillsComponent,
+    EducationComponent,
+    CertificationsComponent,
+    ContactComponent,
+  InsightComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     CommonModule,
-    FormsModule
+  FormsModule,
+  BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

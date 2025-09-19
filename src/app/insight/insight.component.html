@@ -1,7 +1,7 @@
 <div class="insight-section">
   <h2 class="section-title">Insights</h2>
   <div class="insight-list">
-    <div class="insight-card" *ngFor="let insight of insights">
+  <div class="insight-card" *ngFor="let insight of insights" [@slideLeftFadeIn]>
       <div class="insight-header">
         <span class="insight-title">{{ insight.title }}</span>
         <span class="insight-date">{{ insight.date | date:'dd/MM/yyyy' }}</span>

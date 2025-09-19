@@ -3,7 +3,7 @@
     <span class="fr">🏅 Certifications</span> / <span class="en">Certifications</span>
   </h2>
   <div class="certifications-list">
-    <div class="cert-card" *ngFor="let cert of certifications">
+  <div class="cert-card" *ngFor="let cert of certifications" [@zoomIn]>
       <div class="cert-title">
         <span class="fr">{{ cert.titleFr }}</span>
         <span class="en">/ {{ cert.titleEn }}</span>

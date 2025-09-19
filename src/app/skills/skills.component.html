@@ -11,7 +11,7 @@
             <span class="fr">{{ group.labelFr }}</span> <span class="en">/ {{ group.labelEn }}</span>
           </div>
           <ul>
-            <li *ngFor="let skill of group.items">
+            <li *ngFor="let skill of group.items; let i = index" [@fadeInCascade]="{ value: '', params: { delay: i * 80 } }">
               <span class="icon">✔️</span> <span>{{ skill }}</span>
             </li>
           </ul>
@@ -28,7 +28,7 @@
             <span class="fr">{{ group.labelFr }}</span> <span class="en">/ {{ group.labelEn }}</span>
           </div>
           <ul *ngIf="group.items.length > 0">
-            <li *ngFor="let skill of group.items">
+            <li *ngFor="let skill of group.items; let i = index" [@fadeInCascade]="{ value: '', params: { delay: i * 80 } }">
               <span class="icon">💡</span> <span>{{ skill }}</span>
             </li>
           </ul>

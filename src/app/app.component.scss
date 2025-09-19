@@ -1,0 +1,33 @@
+// Dark mode global styles
+.dark-mode {
+	background: #181a1b !important;
+	color: #f3f3f3 !important;
+}
+
+.dark-mode .navbar {
+	background: #23272f !important;
+	color: #f3f3f3 !important;
+}
+
+.dark-mode a, .dark-mode .navbar a {
+	color: #90caf9 !important;
+}
+
+.dark-mode .card, .dark-mode .projects-section, .dark-mode .skills-section, .dark-mode .education-section, .dark-mode .certifications-section, .dark-mode .cv-download-container, .dark-mode .contact-section, .dark-mode .insight-section {
+	background: #23272f !important;
+	color: #f3f3f3 !important;
+	box-shadow: 0 4px 24px rgba(0,0,0,0.45) !important;
+}
+
+.dark-toggle {
+	background: none;
+	border: none;
+	font-size: 1.5rem;
+	margin-left: 1.2rem;
+	cursor: pointer;
+	color: inherit;
+	transition: transform 0.18s;
+}
+.dark-toggle:hover {
+	transform: scale(1.15);
+}

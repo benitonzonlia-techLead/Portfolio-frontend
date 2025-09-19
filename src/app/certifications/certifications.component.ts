@@ -1,9 +1,11 @@
 import { Component } from '@angular/core';
+import { zoomIn } from '../animations';
 
 @Component({
   selector: 'app-certifications',
   templateUrl: './certifications.component.html',
-  styleUrls: ['./certifications.component.scss']
+  styleUrls: ['./certifications.component.scss'],
+  animations: [zoomIn]
 })
 export class CertificationsComponent {
   certifications = [

@@ -1,9 +1,11 @@
 import { Component } from '@angular/core';
+import { fadeInCenter } from '../animations';
 
 @Component({
   selector: 'app-education',
   templateUrl: './education.component.html',
-  styleUrls: ['./education.component.scss']
+  styleUrls: ['./education.component.scss'],
+  animations: [fadeInCenter]
 })
 export class EducationComponent {
   education = [

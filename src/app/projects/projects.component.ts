@@ -1,9 +1,12 @@
 import { Component } from '@angular/core';
+import { fadeSlideUp } from '../animations';
+import { trigger } from '@angular/animations';
 
 @Component({
   selector: 'app-projects',
   templateUrl: './projects.component.html',
-  styleUrls: ['./projects.component.scss']
+  styleUrls: ['./projects.component.scss'],
+  animations: [fadeSlideUp]
 })
 export class ProjectsComponent {
   projects = [
@@ -56,4 +59,22 @@ export class ProjectsComponent {
       impact: "Migration cloud, développement from scratch, consommation d’APIs ATPCO, tests et scalabilité"
     }
   ];
+
+  // Filtres disponibles
+  stacks: string[] = Array.from(
+    new Set(this.projects.flatMap(p => p.stack.map(s => s.replace(/\s*\d+\/\d+|\s*\d+/g, '').trim())))
+  ).sort();
+  roles: string[] = Array.from(new Set(this.projects.map(p => p.role.split(' / ')[0].trim()))).sort();
+
+  // Valeurs sélectionnées
+  selectedStack: string = '';
+  selectedRole: string = '';
+
+  get filteredProjects() {
+    return this.projects.filter(project => {
+      const stackMatch = this.selectedStack ? project.stack.some(s => s.replace(/\s*\d+\/\d+|\s*\d+/g, '').trim() === this.selectedStack) : true;
+      const roleMatch = this.selectedRole ? project.role.split(' / ')[0].trim() === this.selectedRole : true;
+      return stackMatch && roleMatch;
+    });
+  }
 }
