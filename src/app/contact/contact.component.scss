@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Poppins:wght@400;700&display=swap');
+
+$primary-blue: #2563eb;
+$accent-orange: #ff7f11;
+$white: #fff;
+$shadow: 0 4px 24px rgba(37, 99, 235, 0.15);
+
+.contact-section {
+  max-width: 900px;
+  margin: 2.5rem auto;
+  padding: 0 1rem;
+  font-family: 'Inter', 'Poppins', Arial, sans-serif;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 2rem;
+  font-family: 'Poppins', Arial, sans-serif;
+  color: $primary-blue;
+  margin-bottom: 2rem;
+  font-weight: 700;
+  .fr {
+    margin-right: 0.5em;
+  }
+  .en {
+    color: $accent-orange;
+    font-size: 1.1rem;
+    font-weight: 600;
+  }
+}
+
+.contact-content {
+  display: flex;
+  gap: 2.5rem;
+  background: $white;
+  border-radius: 1.5rem;
+  box-shadow: $shadow;
+  padding: 2.5rem 2rem;
+  @media (max-width: 900px) {
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 1.2rem 0.5rem;
+  }
+}
+
+.contact-form {
+  flex: 1 1 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  .form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3em;
+    label {
+      font-weight: 600;
+      color: $primary-blue;
+      font-family: 'Poppins', Arial, sans-serif;
+      margin-bottom: 0.2em;
+    }
+    input, textarea {
+      border: 1.5px solid #e0e7ef;
+      border-radius: 0.7em;
+      padding: 0.7em 1em;
+      font-size: 1.05rem;
+      font-family: 'Inter', Arial, sans-serif;
+      transition: border 0.18s;
+      &:focus {
+        border: 1.5px solid $accent-orange;
+        outline: none;
+      }
+    }
+  }
+  .form-actions {
+    display: flex;
+    justify-content: flex-end;
+  }
+  .send-btn {
+    background: $primary-blue;
+    color: $white;
+    font-family: 'Poppins', Arial, sans-serif;
+    font-weight: 700;
+    font-size: 1.08rem;
+    border: none;
+    border-radius: 2em;
+    padding: 0.85em 2.2em;
+    box-shadow: 0 2px 12px rgba(37, 99, 235, 0.10);
+    transition: transform 0.18s, box-shadow 0.18s, background 0.18s;
+    cursor: pointer;
+    outline: none;
+    &:hover, &:focus {
+      transform: scale(1.06) translateY(-2px);
+      box-shadow: 0 6px 24px rgba(255, 127, 17, 0.18);
+      background: $accent-orange;
+      color: $white;
+    }
+  }
+  .form-error {
+    color: $accent-orange;
+    font-weight: 600;
+    margin-top: 0.5em;
+  }
+  .form-success {
+    color: $primary-blue;
+    font-weight: 600;
+    margin-top: 0.5em;
+  }
+}
+
+.calendly-section {
+  flex: 1 1 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.2rem;
+  .calendly-title {
+    font-size: 1.15rem;
+    color: $accent-orange;
+    font-family: 'Poppins', Arial, sans-serif;
+    font-weight: 700;
+    margin-bottom: 0.7em;
+    text-align: center;
+    .fr {
+      margin-right: 0.5em;
+    }
+    .en {
+      color: $primary-blue;
+      font-size: 1.05rem;
+      font-weight: 600;
+    }
+  }
+  iframe {
+    border-radius: 1em;
+    border: 1.5px solid #e0e7ef;
+    box-shadow: 0 2px 12px rgba(37, 99, 235, 0.10);
+    width: 100%;
+    min-width: 260px;
+    min-height: 320px;
+    max-width: 480px;
+    background: $white;
+  }
+}
