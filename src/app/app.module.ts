@@ -7,6 +7,7 @@ import { CommonModule } from '@angular/common';
 import { AboutObjectivesComponent } from './about/about-objectives.component';
 import { AboutValuesComponent } from './about/about-values.component';
 import { CvDownloadComponent } from './cv-download/cv-download.component';
+import { ProjectsComponent } from './projects/projects.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { CvDownloadComponent } from './cv-download/cv-download.component';
     AboutComponent,
     AboutObjectivesComponent,
     AboutValuesComponent,
-    CvDownloadComponent
+    CvDownloadComponent,
+    ProjectsComponent
   ],
   imports: [
     BrowserModule,

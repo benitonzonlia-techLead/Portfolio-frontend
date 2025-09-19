@@ -1,0 +1,17 @@
+<div class="projects-section">
+  <h2 class="section-title">Projets réalisés</h2>
+  <div class="projects-grid">
+    <div class="project-card" *ngFor="let project of projects">
+      <div class="project-header">
+        <span class="client">{{ project.client }}</span>
+        <span class="period">{{ project.period }}</span>
+      </div>
+      <div class="project-role">{{ project.role }}</div>
+      <div class="project-mission">{{ project.mission }}</div>
+      <div class="project-stack">
+        <span *ngFor="let tech of project.stack" class="stack-item">{{ tech }}</span>
+      </div>
+      <div class="project-impact">{{ project.impact }}</div>
+    </div>
+  </div>
+</div>
