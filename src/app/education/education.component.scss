@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Poppins:wght@400;700&display=swap');
+
+$primary-blue: #2563eb;
+$accent-orange: #ff7f11;
+$white: #fff;
+$shadow: 0 4px 24px rgba(37, 99, 235, 0.15);
+
+.education-section {
+  max-width: 600px;
+  margin: 2.5rem auto;
+  padding: 0 1rem;
+  font-family: 'Inter', 'Poppins', Arial, sans-serif;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 2rem;
+  font-family: 'Poppins', Arial, sans-serif;
+  color: $primary-blue;
+  margin-bottom: 2rem;
+  font-weight: 700;
+  .fr {
+    margin-right: 0.5em;
+  }
+  .en {
+    color: $accent-orange;
+    font-size: 1.1rem;
+    font-weight: 600;
+  }
+}
+
+.education-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.education-card {
+  background: $white;
+  border-radius: 1.2rem;
+  box-shadow: $shadow;
+  padding: 1.5rem 1.2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+  align-items: flex-start;
+  border-left: 6px solid $primary-blue;
+  transition: transform 0.18s, box-shadow 0.18s, border-color 0.18s;
+  &:hover, &:focus {
+    transform: scale(1.03) translateY(-2px);
+    box-shadow: 0 8px 32px rgba(255, 127, 17, 0.18);
+    border-left: 6px solid $accent-orange;
+  }
+}
+
+.degree {
+  font-size: 1.08rem;
+  font-weight: 600;
+  color: $primary-blue;
+  .en {
+    color: $accent-orange;
+    font-weight: 500;
+    font-size: 0.98rem;
+  }
+}
+
+.institution {
+  font-size: 1.01rem;
+  color: #333;
+  .en {
+    color: $accent-orange;
+    font-size: 0.97rem;
+  }
+}
+
+.year-honors {
+  font-size: 0.98rem;
+  color: #444;
+  .year {
+    font-weight: 700;
+    color: $primary-blue;
+    margin-right: 0.5em;
+  }
+  .honors.fr {
+    color: $accent-orange;
+    margin-left: 0.3em;
+  }
+  .honors.en {
+    color: $primary-blue;
+    margin-left: 0.3em;
+  }
+}
+
+@media (max-width: 600px) {
+  .section-title {
+    font-size: 1.3rem;
+  }
+  .education-card {
+    padding: 1rem 0.7rem;
+  }
+}
