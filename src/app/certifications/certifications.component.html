@@ -1,0 +1,19 @@
+<div class="certifications-section">
+  <h2 class="section-title">
+    <span class="fr">🏅 Certifications</span> / <span class="en">Certifications</span>
+  </h2>
+  <div class="certifications-list">
+    <div class="cert-card" *ngFor="let cert of certifications">
+      <div class="cert-title">
+        <span class="fr">{{ cert.titleFr }}</span>
+        <span class="en">/ {{ cert.titleEn }}</span>
+      </div>
+      <div class="cert-details">
+        <span class="issuer fr">{{ cert.issuerFr }}</span>
+        <span class="en">/ {{ cert.issuerEn }}</span>
+        <span class="location">- {{ cert.location }}</span>
+        <span class="year">- {{ cert.year }}</span>
+      </div>
+    </div>
+  </div>
+</div>
