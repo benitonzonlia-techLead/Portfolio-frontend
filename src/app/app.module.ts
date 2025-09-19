@@ -10,6 +10,7 @@ import { CvDownloadComponent } from './cv-download/cv-download.component';
 import { ProjectsComponent } from './projects/projects.component';
 import { SkillsComponent } from './skills/skills.component';
 import { EducationComponent } from './education/education.component';
+import { CertificationsComponent } from './certifications/certifications.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { EducationComponent } from './education/education.component';
     CvDownloadComponent,
   ProjectsComponent,
   SkillsComponent,
-  EducationComponent
+  EducationComponent,
+  CertificationsComponent
   ],
   imports: [
     BrowserModule,
