@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Poppins:wght@400;700&display=swap');
+
+$primary-blue: #2563eb;
+$accent-orange: #ff7f11;
+$white: #fff;
+$shadow: 0 4px 24px rgba(37, 99, 235, 0.15);
+
+.about-container {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  background: $white;
+  border-radius: 1.5rem;
+  box-shadow: $shadow;
+  padding: 2rem;
+  gap: 2rem;
+  font-family: 'Inter', 'Poppins', Arial, sans-serif;
+  overflow: hidden;
+
+  @media (max-width: 900px) {
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+  }
+}
+
+.avatar-col {
+  flex: 0 0 220px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .avatar {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    box-shadow: 0 8px 32px rgba(37, 99, 235, 0.25);
+    border: 6px solid $primary-blue;
+    object-fit: cover;
+    background: $white;
+    transition: transform 0.3s;
+    will-change: transform;
+    &:hover {
+      transform: scale(1.04) rotate(-2deg);
+      box-shadow: 0 12px 40px rgba(255, 127, 17, 0.18);
+      border-color: $accent-orange;
+    }
+  }
+}
+
+.content-col {
+  flex: 1 1 0;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+
+  h2, h3 {
+    color: $primary-blue;
+    font-family: 'Poppins', 'Inter', Arial, sans-serif;
+    margin-bottom: 0.5rem;
+    font-weight: 700;
+    letter-spacing: 0.01em;
+  }
+
+  .bio-fr, .bio-en {
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+    color: #222;
+    line-height: 1.6;
+    font-family: 'Inter', Arial, sans-serif;
+  }
+
+  .objectives, .values {
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      li {
+        margin-bottom: 0.5rem;
+        font-size: 1rem;
+        display: flex;
+        align-items: center;
+        color: #333;
+        .divider {
+          color: $accent-orange;
+          margin: 0 0.5em;
+          font-weight: bold;
+        }
+      }
+    }
+  }
+}
+
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.8s forwards;
+  animation-delay: 0.2s;
+}
+
+.slide-up {
+  opacity: 0;
+  transform: translateY(40px);
+  animation: slideUp 0.9s forwards;
+  animation-delay: 0.4s;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes slideUp {
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+  .about-container {
+    padding: 0.5rem;
+    gap: 1rem;
+  }
+  .avatar-col .avatar {
+    width: 120px;
+    height: 120px;
+    border-width: 4px;
+  }
+  .content-col {
+    gap: 1rem;
+    h2, h3 {
+      font-size: 1.2rem;
+    }
+    .bio-fr, .bio-en, .objectives ul li, .values ul li {
+      font-size: 0.98rem;
+    }
+  }
+}
