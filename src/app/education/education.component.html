@@ -1,0 +1,22 @@
+<div class="education-section">
+  <h2 class="section-title">
+    <span class="fr">🎓 Formation</span> / <span class="en">Education</span>
+  </h2>
+  <div class="education-list">
+    <div class="education-card" *ngFor="let edu of education">
+      <div class="degree">
+        <span class="fr">{{ edu.degreeFr }}</span>
+        <span class="en">/ {{ edu.degreeEn }}</span>
+      </div>
+      <div class="institution">
+        <span class="fr">{{ edu.institutionFr }}</span>
+        <span class="en">/ {{ edu.institutionEn }}</span>
+      </div>
+      <div class="year-honors">
+        <span class="year">{{ edu.year }}</span>
+        <span class="honors fr" *ngIf="edu.honorsFr">- {{ edu.honorsFr }}</span>
+        <span class="honors en" *ngIf="edu.honorsEn">/ {{ edu.honorsEn }}</span>
+      </div>
+    </div>
+  </div>
+</div>
