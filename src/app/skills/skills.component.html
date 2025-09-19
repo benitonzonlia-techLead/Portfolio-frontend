@@ -1,0 +1,44 @@
+<div class="skills-section">
+  <h2 class="section-title">Compétences / Skills</h2>
+  <div class="skills-grid">
+    <div class="skills-col technical">
+      <h3 class="skills-title">
+        <span class="fr">Compétences techniques</span> / <span class="en">Technical Skills</span>
+      </h3>
+      <div class="skills-list" *ngFor="let group of technicalSkills">
+        <div class="skills-group">
+          <div class="group-label">
+            <span class="fr">{{ group.labelFr }}</span> <span class="en">/ {{ group.labelEn }}</span>
+          </div>
+          <ul>
+            <li *ngFor="let skill of group.items">
+              <span class="icon">✔️</span> <span>{{ skill }}</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="skills-col soft">
+      <h3 class="skills-title">
+        <span class="fr">Compétences transversales</span> / <span class="en">Soft Skills</span>
+      </h3>
+      <div class="skills-list" *ngFor="let group of softSkills">
+        <div class="skills-group">
+          <div class="group-label">
+            <span class="fr">{{ group.labelFr }}</span> <span class="en">/ {{ group.labelEn }}</span>
+          </div>
+          <ul *ngIf="group.items.length > 0">
+            <li *ngFor="let skill of group.items">
+              <span class="icon">💡</span> <span>{{ skill }}</span>
+            </li>
+          </ul>
+          <ul *ngIf="group.items.length === 0">
+            <li>
+              <span class="icon">💡</span> <span>{{ group.labelFr }}</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
